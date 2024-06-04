@@ -152,4 +152,12 @@ document.addEventListener('DOMContentLoaded', function() {
     event.stopPropagation();
   });
 });
+// Add loading class to body to show loader
+document.body.classList.add('loading');
+
+setTimeout(function() {
+    document.getElementById('loader-container').style.display = 'none';
+    document.body.classList.remove('loading'); // Remove loading class
+}, Math.random() * (4000 - 3000) + 2000);
+
 
