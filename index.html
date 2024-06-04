@@ -24,8 +24,33 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/quantum.js"></script>
+  <style>
+    #loader-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #474545; /* Dark background color */
+        z-index: 9999; 
+    }
+    l-quantum {
+        --l-quantum-color: #ffffff; 
+    }
+    
+    body.loading > * {
+        display: none;
+    }
+</style>
 </head>
 <body>
+  <div id="loader-container">
+    <l-quantum size="45" speed="1.75" color="black"></l-quantum>
+  </div>
   <div class="video-background">
     <video id="bg-video" loop muted playsinline webkit-playsinline preload="auto">
         <source src="images/flag.mp4" type="video/mp4">
