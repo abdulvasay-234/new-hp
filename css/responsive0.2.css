@@ -1256,6 +1256,7 @@
     justify-content: flex-start;
     margin-top: -5%;
     max-width: 100%;
+   gap:10px;
   }
   
   
@@ -1283,7 +1284,10 @@
   
   /* Accessing Gold Partner elements in CSS */
   .gold-partner {
-    margin-top: 10%;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   }
   
   .silver-partner{
@@ -1300,6 +1304,9 @@
   .hiring-partner{
     margin-top: -5%;
   }
+ .tracks-partner{
+  margin-top: -5%;
+}
   
   /*platform partner*/
   .platform-partner .platform-partner-logo {
@@ -1313,9 +1320,16 @@
     height: auto;
     margin-top: 10%;
   }
-  img.gold-partner-logo {
-    width: 150px;
-  }
+img.gold-partner-logo1 {
+  width: 150px;
+}
+img.gold-partner-logo2 {
+  width: 150px;
+  border:none;
+  border-radius: 10px;
+  margin-left: 7px;
+
+}
   .merchandise-partner-logo {
     border-radius: 11px;
     width: 150px;
@@ -1348,7 +1362,11 @@
     color:#ffffff;
   }
   
-  
+ .tracks-partner-logo {
+  border-radius: 11px;
+  width: 150px;
+  height: 55px;
+}
   
   
   
