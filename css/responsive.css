@@ -1249,7 +1249,7 @@ nav {
 
 /* Sponsor type styles */
 .sponsor-type {
-  margin-bottom: 40px;
+  margin-bottom:0px;
   margin-top: 24%;
   max-width: 100%;
 }
@@ -1325,6 +1325,9 @@ nav {
 .hiring-partner{
   margin-top: -5%;
 }
+.tracks-partner{
+  margin-top: -5%;
+}
 
 /*platform partner*/
 .platform-partner .platform-partner-logo {
@@ -1338,8 +1341,15 @@ nav {
   height: auto;
   margin-top: 10%;
 }
-img.gold-partner-logo {
+img.gold-partner-logo1 {
   width: 150px;
+}
+img.gold-partner-logo2 {
+  width: 150px;
+  border:none;
+  border-radius: 10px;
+  margin-left: 7px;
+
 }
 .merchandise-partner-logo {
   border-radius: 11px;
@@ -1372,7 +1382,11 @@ img.gold-partner-logo {
 .sponsor-type .partner-info .p1 {
   color:#ffffff;
 }
-
+.tracks-partner-logo {
+  border-radius: 11px;
+  width: 150px;
+  height: 55px;
+}
 
 
 
