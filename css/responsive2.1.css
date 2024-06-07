@@ -1289,9 +1289,12 @@
   }
   
   /* Accessing Gold Partner elements in CSS */
-  .gold-partner {
-    margin-top: 10%;
-  }
+.gold-partner{  
+    margin-top: -10%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
   
   .silver-partner{
     margin-top: -11%;
@@ -1305,6 +1308,9 @@
   
   }
   .hiring-partner{
+    margin-top: -5%;
+  }
+ .tracks-partner{
     margin-top: -5%;
   }
   
@@ -1321,8 +1327,15 @@
     margin-top: 3%;
     margin-right: 17px;
   }
-  img.gold-partner-logo {
+img.gold-partner-logo1 {
     width: 150px;
+  }
+  img.gold-partner-logo2 {
+    width: 150px;
+    border:none;
+    border-radius: 10px;
+    margin-left: 7px;
+  
   }
   .merchandise-partner-logo {
     border-radius: 11px;
@@ -1356,7 +1369,11 @@
     color:#ffffff;
   }
   
-  
+  .tracks-partner-logo {
+    border-radius: 11px;
+    width: 150px;
+    height: 55px;
+  }
   
   
   
