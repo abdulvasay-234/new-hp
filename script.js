@@ -160,4 +160,27 @@ setTimeout(function() {
     document.body.classList.remove('loading'); // Remove loading class
 }, Math.random() * (4000 - 3000) + 2000);
 
+document.addEventListener('DOMContentLoaded', function() {
+  const scheduleContainer = document.querySelector('.schedule-container');
+  const leftArrow = document.querySelector('#schedule .scroll-arrow-left');
+  const rightArrow = document.querySelector('#schedule .scroll-arrow-right');
+
+  if (leftArrow && rightArrow && scheduleContainer) {
+    leftArrow.addEventListener('click', function() {
+      scheduleContainer.scrollBy({
+        left: -scheduleContainer.clientWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    rightArrow.addEventListener('click', function() {
+      scheduleContainer.scrollBy({
+        left: scheduleContainer.clientWidth,
+        behavior: 'smooth'
+      });
+    });
+  } else {
+    console.error("Elements not found", { leftArrow, rightArrow, scheduleContainer });
+  } 
+});
 
