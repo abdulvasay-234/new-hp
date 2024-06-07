@@ -1290,9 +1290,12 @@
   }
   
   /* Accessing Gold Partner elements in CSS */
-  .gold-partner {
-    margin-top: 10%;
-  }
+.gold-partner{  
+    margin-top: -10%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
   
   .silver-partner{
     margin-top: -11%;
@@ -1308,7 +1311,9 @@
   .hiring-partner{
     margin-top: -5%;
   }
-  
+  .tracks-partner{
+    margin-top: -5%;
+  }
   /*platform partner*/
   .platform-partner .platform-partner-logo {
     width: 150px;
@@ -1322,9 +1327,15 @@
     margin-top: 3%;
     margin-right: 17px;
   }
-  img.gold-partner-logo {
+img.gold-partner-logo1 {
     width: 150px;
-  }
+ }
+ img.gold-partner-logo2 {
+    width: 150px;
+    border:none;
+    border-radius: 10px;
+    margin-left: 7px;
+ }
   .merchandise-partner-logo {
     border-radius: 11px;
     width: 150px;
@@ -1356,7 +1367,11 @@
   .sponsor-type .partner-info .p1 {
     color:#ffffff;
   }
-  
+  .tracks-partner-logo {
+    border-radius: 11px;
+    width: 150px;
+    height: 55px;
+  }
   
   
   
@@ -1452,10 +1467,10 @@
     padding: 0.75rem;
     text-decoration: none;
     transition: all 235ms ease-in-out;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
+    border-bottom-left-radius: 95px 255px;
+    border-bottom-right-radius: 225px 95px;
+    border-top-left-radius: 255px 95px;
+    border-top-right-radius: 95px 225px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
