@@ -29,60 +29,69 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Calculate the time difference between now and June 8, 2024, 8:00 AM
-  const targetDate = new Date(2024, 5, 8, 8, 0, 0); // June 8th, 2024, 8:00 AM
+// Calculate the time difference between now and June 8, 2024, 8:00 AM
+const targetDate = new Date(2024, 5, 8, 8, 0, 0); // June 8th, 2024, 8:00 AM
 
-  // Update the countdown every second
-  setInterval(function() {
-    const now = new Date();
-    const difference = targetDate.getTime() - now.getTime();
+// Update the countdown every second
+const countdownInterval = setInterval(function() {
+  const now = new Date();
+  const difference = targetDate.getTime() - now.getTime();
 
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  // Check if the target date has passed
+  if (difference <= 0) {
+    clearInterval(countdownInterval);
+    document.querySelector('.clock-days .val').textContent = 0;
+    document.querySelector('.clock-hours .val').textContent = 0;
+    document.querySelector('.clock-minutes .val').textContent = 0;
+    document.querySelector('.clock-seconds .val').textContent = 0;
+    return;
+  }
 
-    document.querySelector('.clock-days .val').textContent = days;
-    document.querySelector('.clock-hours .val').textContent = hours;
-    document.querySelector('.clock-minutes .val').textContent = minutes;
-    document.querySelector('.clock-seconds .val').textContent = seconds;
-  }, 1000);
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-  // Final countdown initialization
-  $('.countdown').final_countdown({
-    start: '1362139200',
-    end: '1388461320',
-    now: '1387461319',
-    selectors: {
-      value_seconds: '.clock-seconds .val',
-      canvas_seconds: 'canvas_seconds',
-      value_minutes: '.clock-minutes .val',
-      canvas_minutes: 'canvas_minutes',
-      value_hours: '.clock-hours .val',
-      canvas_hours: 'canvas_hours',
-      value_days: '.clock-days .val',
-      canvas_days: 'canvas_days'
-    },
-    seconds: {
-      borderColor: '#7995D5',
-      borderWidth: '6'
-    },
-    minutes: {
-      borderColor: '#ACC742',
-      borderWidth: '6'
-    },
-    hours: {
-      borderColor: '#ECEFCB',
-      borderWidth: '6'
-    },
-    days: {
-      borderColor: '#FF9900',
-      borderWidth: '6'
-    }
-  }, function() {
-    // Finish callback
-  });
+  document.querySelector('.clock-days .val').textContent = days;
+  document.querySelector('.clock-hours .val').textContent = hours;
+  document.querySelector('.clock-minutes .val').textContent = minutes;
+  document.querySelector('.clock-seconds .val').textContent = seconds;
+}, 1000);
 
+// Final countdown initialization
+$('.countdown').final_countdown({
+  start: '1362139200',
+  end: '1388461320',
+  now: '1387461319',
+  selectors: {
+    value_seconds: '.clock-seconds .val',
+    canvas_seconds: 'canvas_seconds',
+    value_minutes: '.clock-minutes .val',
+    canvas_minutes: 'canvas_minutes',
+    value_hours: '.clock-hours .val',
+    canvas_hours: 'canvas_hours',
+    value_days: '.clock-days .val',
+    canvas_days: 'canvas_days'
+  },
+  seconds: {
+    borderColor: '#7995D5',
+    borderWidth: '6'
+  },
+  minutes: {
+    borderColor: '#ACC742',
+    borderWidth: '6'
+  },
+  hours: {
+    borderColor: '#ECEFCB',
+    borderWidth: '6'
+  },
+  days: {
+    borderColor: '#FF9900',
+    borderWidth: '6'
+  }
+}, function() {
+  // Finish callback
+});
 });
 
 function downloadPDF() {
