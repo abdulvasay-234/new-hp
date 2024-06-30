@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.4/css/all.min.css" integrity="sha512-McPjr7hXfG5dZvM2LjaotmHI0Zd6GyjGvp1D6pl5AZ7sJStwKqRYF5tB0lJUUtZp+81i1ZPlAXr5cFlg+eCxgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/responsive0.1.css">
   <link rel="stylesheet" href="css/responsive0.2.css">
@@ -69,9 +71,7 @@
     color: #333; /* Adjust link color */
     transition: background-color 0.3s ease; /* Smooth hover transition */
 }
-html {
-    scroll-behavior: auto;
-}
+
 
 
   .dropdown-content-c input {
@@ -85,27 +85,91 @@ html {
   .dropdown-content-c input:hover {
     background-color: #f1f1f1;
   }
-
+  @keyframes dropDown {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 0% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
   .namebtn {
     cursor: pointer;
     display: inline-block;
     padding: 5px 5px;
-    background-color: #28a745;
+    background-color: #c81543;
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(200,21,67,1) 95%, rgba(200,21,67,1) 100%);
     color: #ffffff;
     text-decoration: none;
-    border: 2px solid #28a745;
+    border: 2px solid black;
     border-radius: 5px;
+    animation: dropDown 5s infinite;
   }
 
   .button1 {
     display: inline-block;
     padding: 5px 5px;
-    background-color: #007bff;
+    background-color: #c81543;
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(200,21,67,1) 95%, rgba(200,21,67,1) 100%);
     color: #ffffff;
     text-decoration: none;
-    border: 2px solid #007bff;
+    border: 2px solid black;
     border-radius: 5px;
+    animation: dropDown 5s infinite;
   }
+
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scrolling if needed */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.social-icons {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.social-icons a {
+  color: #333; /* Adjust color as needed */
+  text-decoration: none;
+  margin-right: 10px; /* Adjust spacing between icons */
+}
+
+
 </style>
 
 </head>
@@ -195,7 +259,24 @@ html {
               <!-- Options will be dynamically added here -->
             </div>
           </div>
-          <a id="button1" class="button1" style="user-select: none;">Download</a>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>✅ Download has begun..</p>
+              <img src="images/modal.gif" alt="Downloading GIF" class="download-icon" style="width: 100px; height: 100px;">
+              <p style="font-size: 15px;">Don't forget to share it on socials and tag @codewavehub!</p><br>
+              <p style="font-size: 10px;">Click Below to Check out our socials!</p>
+              <div class="social-icons">
+                <a href="https://instagram.com/codewavehub" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/codewavehub" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/company/codewavehub" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          
+               
+          <a id="button1" class="button1" style="user-select: none;" onclick="handleDownloadClick()">Download</a>
+          
         </div>
       </div>
     </section>
