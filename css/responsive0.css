@@ -375,6 +375,7 @@ nav {
   margin-left: 23px;
   background-size: 100% 200%;
   animation: dropDown 5s infinite;
+  max-height:100%;
 }
 
 .clock-item .inner {
