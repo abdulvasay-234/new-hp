@@ -193,7 +193,7 @@ nav {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  width: 80px;
+  max-width:100%;
   margin-left: -20px;
   font-size: 12px;
   text-align: left;
