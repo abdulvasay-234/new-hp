@@ -109,24 +109,37 @@
         <div id="animation-container">
           <h2 id="animated-text">Where Innovation Meets Collaboration<span class="dot">.</span><span class="dot">.</span></h2>
         </div>        
-        <p><strong><a href="https://tinyurl.com/lordslocation"><img src="images/animat-map-color.gif" alt="Map Icon" class="map-icon"></a> <p1>8 & 9 June | LIET, Hyderabad</p1></strong></p>
-        <div class="buttons">
+        <p><strong><a href="https://tinyurl.com/lordslocation"><img src="images/animat-map-color.gif" alt="Map Icon" class="map-icon"></a> <p1>8 & 9 June 2024 | LIET, Hyderabad</p1></strong></p>
+        <!-- <div class="buttons">
           <a href="https://hackprix.devfolio.co/" class="devfolio-button">
               <img src="images/applywithdevfolio2.PNG" alt="Apply with DEVFOLIO" class="devfolio-image">
           </a>          
           <a href="https://discord.com/invite/EbfEhyaNWK" class="discord-button">
               <img src="images/joindis.PNG" alt="Discord">
           </a>
-      </div>      
+      </div>       -->
     </div>
   </div>
     <!-- Countdown Timer -->
     <section id="count" class="container">
     <div class="countdown-container container">
       <div class="heading-container">
-        <h1 class="front-text" style="font-family: 'NTBrickSans', sans-serif;">Hackathon Begins in 🏁:</h1>
+        <h1 class="front-text" style="font-family: 'NTBrickSans', sans-serif;">Download Participation Certificate</h1>
+       
       </div>
-      <div class="clock row">
+
+ <img src="./images/certlogo.png" alt="Certificate Logo" height="200px" width="200px" class="certificate-logo">
+      
+ <div class="dropdown">
+  <button class="namebtn">Find your Name</button>
+  <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <!-- Options will be dynamically added here -->
+  </div>
+  <a id="button1" class="button1">Download</a>
+</div>
+
+      <!-- <div class="clock row">
         <div class="clock-item clock-days countdown-time-value col-sm-6 col-md-3">
           <div class="wrap">
             <div class="inner">
@@ -170,7 +183,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     </section>
@@ -464,6 +477,9 @@
       <a href="pdfs/mlh-code-of-conduct (2).pdf" class="contact-btn" download><img src="images/checklist.png" alt="Code of Conduct">COC</a>
     </div>
   </section>
+  <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="./FileSaver.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
