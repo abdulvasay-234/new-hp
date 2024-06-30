@@ -515,13 +515,15 @@ username = "test";
 const buttonn = document.querySelector("#button1");
 
 
+
 // Populate options dynamically
 optionsArray.forEach((optionText) => {
-const optionElement = document.createElement("a");
-optionElement.textContent = optionText;
-optionElement.href = "#"; // You can set a link if needed
-dropdownContent.appendChild(optionElement);
+  const optionElement = document.createElement("a");
+  optionElement.textContent = optionText;
+  optionElement.href = "javascript:void(0)"; // Prevent default behavior
+  dropdownContent.appendChild(optionElement);
 });
+
 
 // Event listener for option selection
 dropdownContent.addEventListener("click", (event) => {
