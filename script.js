@@ -538,16 +538,24 @@ console.log(`Selected option: ${username}`);
 });
 
 buttonn.addEventListener("click", () => {
+  if (username === "test") {
+    alert("Please select your name");
+  } else {
+    // Show the modal since a name has been selected
+    const modal = document.getElementById("myModal");
+    const closeModal = modal.querySelector(".close");
 
-if(username == "test"){
-  alert("Please select your name");
+    modal.style.display = "block";
 
-}
-else{
-  console.log("kk");
-  generatePDF(username);
-}
-})
+    // Close the modal when the user clicks on the close button
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    generatePDF(username);
+  }
+});
+
 
 // Filter function for search
 function filterFunction() {
@@ -662,4 +670,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error("Elements not found", { leftArrow, rightArrow, scheduleContainer });
   } 
 });
+
+
 
