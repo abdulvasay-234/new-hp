@@ -503,6 +503,10 @@ const optionsArray = ["Chinmayee Yasaswini",
   "Zobia Sultana",
 "Shubhnagi Gupta",
 "Aashi Gupta",
+"Abdul Basit Patwegar",
+"Rohini Koli",
+"Abdul Gani Shaikh",
+"Rohit Mannurkar",
 "Freya Jain"];
 
 
